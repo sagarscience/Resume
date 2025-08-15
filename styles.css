@@ -1,31 +1,40 @@
-/* Reset basic browser styles */
+/* =====================
+   RESET & BASE STYLES
+   ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* General body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f6f8;
   color: #333;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   padding: 20px;
 }
 
-/* Header styles */
+/* =====================
+   HEADER
+   ===================== */
 header {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
 }
 
 header img {
   border-radius: 8px;
+  max-width: 120px;
+  height: auto;
 }
 
 header h1 {
@@ -34,33 +43,39 @@ header h1 {
 }
 
 header p {
-  margin: 8px 0;
+  margin: 5px 0;
 }
 
 header ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
 header ul li p {
   color: #2980b9;
   cursor: pointer;
+  font-weight: 500;
 }
 
 header ul li p:hover {
   text-decoration: underline;
 }
 
-/* Section titles */
+/* =====================
+   SECTION TITLES
+   ===================== */
 h2 {
-  margin: 20px 0 10px;
+  margin: 25px 0 10px;
   color: #34495e;
   border-bottom: 2px solid #2980b9;
   padding-bottom: 5px;
 }
 
-/* Table styles */
+/* =====================
+   TABLES
+   ===================== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -74,22 +89,29 @@ table, th, td {
 th {
   background-color: #2980b9;
   color: white;
-  padding: 8px;
+  padding: 10px;
+  text-align: left;
 }
 
 td {
   padding: 8px;
+  background-color: #ffffff;
 }
 
-/* Work experience and projects */
+/* =====================
+   LISTS
+   ===================== */
 section ul {
   margin-left: 20px;
 }
 
 section ul li {
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
+/* =====================
+   LINKS
+   ===================== */
 a {
   color: #2980b9;
   text-decoration: none;
@@ -99,16 +121,70 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer styles */
+/* =====================
+   FOOTER
+   ===================== */
 footer {
   margin-top: 30px;
   background-color: #fff;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 footer p {
   margin: 5px 0;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header ul {
+    justify-content: center;
+  }
+
+  header img {
+    max-width: 100px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  table, th, td {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
 }
